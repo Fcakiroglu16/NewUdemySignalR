@@ -11,12 +11,50 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
          
-            <button type="button" class="btn btn-primary">
+
+            <div id="connectionId" class="alert alert-primary" role="alert">
+                
+            </div>
+
+            <button type="button" class="btn btn-success disabled mx-1 my-1">
                 Connected Client Count <span id="span-connected-client-count" class="badge text-bg-secondary">4</span>
             </button>
 
-            <button id="btn-send-message-all-client">Tüm client'lara gönder</button>
+            <button class="btn btn-primary mx-1 my-1" id="btn-send-message-all-client">Tüm client'lara gönder</button>
+            <button class="btn btn-primary mx-1 my-1" id="btn-send-message-caller-client">İstek yapan client'a gönder</button>
 
+            <button class="btn btn-primary mx-1 my-1" id="btn-send-message-others-client">Diğer client'lara gönder</button>
+
+           <div>
+               <hr />
+            
+                <input type="text" class="form-control mx-1 my-1" id="text-connectionId" placeholder="connection Id">
+                <button class="btn btn-primary mx-1 my-1" id="btn-send-message-individual-client">Spesifik client'a gönder</button>
+           </div>
+
+           <div>
+               <hr />
+                <div id="groupList" class="alert alert-warning" role="alert">
+                </div>
+
+
+                <button class="btn btn-primary mx-1 my-1" id="btn-groupA-add">A grubuna katıl</button>
+
+                <button class="btn btn-primary mx-1 my-1" id="btn-groupA-remove">A grubunan çık</button>
+
+                <button class="btn btn-primary mx-1 my-1" id="btn-groupB-add">B grubuna katıl</button>
+
+                <button class="btn btn-primary mx-1 my-1" id="btn-groupB-remove">B grubunan çık</button>
+
+
+                <button class="btn btn-primary mx-1 my-1" id="btn-groupA-send-message">A grobuna mesaj gönder</button>
+
+                <button class="btn btn-primary mx-1 my-1" id="btn-groupB-send-message">B grobuna mesaj gönder</button>
+
+           </div>
+
+            
+         
         </div>
 
     </div>

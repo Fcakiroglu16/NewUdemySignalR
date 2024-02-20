@@ -4,5 +4,13 @@
     {
         Task ReceiveMessageForAllClient(string message);
         Task ReceiveConnectedClientCountAllCLient(int  clientCount);
+
+        Task ReceiveMessageForCallerClient(string message);
+
+        Task ReceiveMessageForOthersClient(string message);
+
+        Task ReceiveMessageForIndividualClient(string message);
+
+        Task ReceiveMessageForGroupClients(string message);
     }
 }
