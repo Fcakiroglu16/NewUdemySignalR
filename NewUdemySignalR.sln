@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemySignalR.Web", "UdemySignalR.Web\UdemySignalR.Web.csproj", "{FF89C28D-0C35-4527-84A3-E6E41EEDFFBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdemySignalR.Web", "UdemySignalR.Web\UdemySignalR.Web.csproj", "{FF89C28D-0C35-4527-84A3-E6E41EEDFFBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.ConsoleApp", "SignalR.ConsoleApp\SignalR.ConsoleApp.csproj", "{589F64D0-078A-452B-BA38-9799CB341D2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRClient.API", "SignalRClient.API\SignalRClient.API.csproj", "{91709287-5A87-4FD5-B4FB-124BED51485C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.WorkerService", "SignalR.WorkerService\SignalR.WorkerService.csproj", "{D581D5DB-0A4B-46D3-B0BE-DB6D9F99D6A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{FF89C28D-0C35-4527-84A3-E6E41EEDFFBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF89C28D-0C35-4527-84A3-E6E41EEDFFBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF89C28D-0C35-4527-84A3-E6E41EEDFFBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{589F64D0-078A-452B-BA38-9799CB341D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{589F64D0-078A-452B-BA38-9799CB341D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{589F64D0-078A-452B-BA38-9799CB341D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{589F64D0-078A-452B-BA38-9799CB341D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91709287-5A87-4FD5-B4FB-124BED51485C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91709287-5A87-4FD5-B4FB-124BED51485C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91709287-5A87-4FD5-B4FB-124BED51485C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91709287-5A87-4FD5-B4FB-124BED51485C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D581D5DB-0A4B-46D3-B0BE-DB6D9F99D6A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D581D5DB-0A4B-46D3-B0BE-DB6D9F99D6A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D581D5DB-0A4B-46D3-B0BE-DB6D9F99D6A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D581D5DB-0A4B-46D3-B0BE-DB6D9F99D6A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

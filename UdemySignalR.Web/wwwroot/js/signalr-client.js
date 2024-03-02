@@ -138,9 +138,9 @@
 
 
     const span_client_count = $("#span-connected-client-count");
-    connection.on(receiveConnectedClientCountAllCLient, (count) => {
-        span_client_count.text(count);
-        console.log("connected client count", count);
+    connection.on("ReceiveTypedMessageForAllClient", (user) => {
+
+        console.log("typed message",user);
     })
 
     //subscribes
@@ -169,7 +169,11 @@
     $("#btn-send-message-all-client").click(function () {
 
         const message = "hello world";
-        connection.invoke(broadcastMessageToAllClientHubMethodCall, message).catch(err => console.error("hata", err))
+        // connection.invoke(broadcastMessageToAllClientHubMethodCall, message).catch(err => console.error("hata", err))
+
+        var user = { userName: "ahmet", email: "ahmet@outlook.com" }
+        connection.invoke("BroadcastTypedMessageToAllClient", user).catch(err => console.error("hata", err));
+
         console.log("Mesaj gönderildi.")
     })
 
