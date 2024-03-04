@@ -1,9 +1,15 @@
-﻿namespace UdemySignalR.Web.Hubs
+﻿using UdemySignalR.Web.Models;
+
+namespace UdemySignalR.Web.Hubs
 {
     public interface IExampleTypeSafeHub
     {
         Task ReceiveMessageForAllClient(string message);
-        Task ReceiveConnectedClientCountAllCLient(int  clientCount);
+
+        Task ReceiveTypedMessageForAllClient(Product product);
+
+        Task ReceiveConnectedClientCountAllClient(int clientCount);
+
 
         Task ReceiveMessageForCallerClient(string message);
 

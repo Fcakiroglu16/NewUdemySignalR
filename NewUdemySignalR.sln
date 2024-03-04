@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemySignalR.Web", "UdemySignalR.Web\UdemySignalR.Web.csproj", "{FF89C28D-0C35-4527-84A3-E6E41EEDFFBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdemySignalR.Web", "UdemySignalR.Web\UdemySignalR.Web.csproj", "{FF89C28D-0C35-4527-84A3-E6E41EEDFFBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRClientConsoleApp", "SignalRClientConsoleApp\SignalRClientConsoleApp.csproj", "{D7D7B9CE-1EEC-428C-B755-F81EAC409316}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FF89C28D-0C35-4527-84A3-E6E41EEDFFBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF89C28D-0C35-4527-84A3-E6E41EEDFFBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF89C28D-0C35-4527-84A3-E6E41EEDFFBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7D7B9CE-1EEC-428C-B755-F81EAC409316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D7B9CE-1EEC-428C-B755-F81EAC409316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D7B9CE-1EEC-428C-B755-F81EAC409316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D7B9CE-1EEC-428C-B755-F81EAC409316}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

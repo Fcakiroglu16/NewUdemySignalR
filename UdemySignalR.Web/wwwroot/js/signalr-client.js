@@ -16,9 +16,10 @@
     const broadcastMessageToIndividualClient = "BroadcastMessageToIndividualClient";
     const receiveMessageForIndividualClient = "ReceiveMessageForIndividualClient";
 
-    const receiveConnectedClientCountAllCLient = "ReceiveConnectedClientCountAllCLient";
+    const receiveConnectedClientCountAllClient = "ReceiveConnectedClientCountAllClient";
 
-
+    const receiveTypedMessageForAllClient = "ReceiveTypedMessageForAllClient"
+    const BroadcastTypedMessageToAllClient = "BroadcastTypedMessageToAllClient";
 
     const groupA = "GroupA";
     const groupB = "GroupB";
@@ -138,7 +139,7 @@
 
 
     const span_client_count = $("#span-connected-client-count");
-    connection.on(receiveConnectedClientCountAllCLient, (count) => {
+    connection.on(receiveConnectedClientCountAllClient, (count) => {
         span_client_count.text(count);
         console.log("connected client count", count);
     })
@@ -148,6 +149,12 @@
 
         console.log("Gelen Mesaj", message);
     })
+
+    connection.on(receiveTypedMessageForAllClient, (product) => {
+
+        console.log("Gelen ürün", product);
+    })
+
 
 
     connection.on(receiveMessageForCallerClient, (message) => {
@@ -197,6 +204,17 @@
 
 
     })
+
+
+    $("#btn-send-typed-message-all-client").click(function () {
+
+        const product = { id: 1, name: "pen 1", price: 200 };
+
+
+        connection.invoke(BroadcastTypedMessageToAllClient, product).catch(err => console.error("hata", err))
+        console.log("ürün gönderildi.")
+
+    });
 
 
 
