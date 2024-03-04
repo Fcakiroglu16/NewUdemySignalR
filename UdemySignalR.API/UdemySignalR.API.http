@@ -1,0 +1,6 @@
+@UdemySignalR.API_HostAddress = http://localhost:5034
+
+GET {{UdemySignalR.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

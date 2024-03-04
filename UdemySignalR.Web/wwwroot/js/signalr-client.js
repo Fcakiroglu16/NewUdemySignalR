@@ -25,6 +25,46 @@
     const groupB = "GroupB";
     let currentGroupList = [];
 
+
+
+    async function start() {
+
+        try {
+            await connection.start().then(() => {
+                console.log("Hub ile bağlantı kuruldu");
+                $("#connectionId").html(`Connection Id : ${connection.connectionId}`);
+            });
+        }
+        catch (err) {
+            console.error("hub ile bağlantı kurulamadı", err);
+            setTimeout(() => start(), 3000)
+        }
+    }
+
+    connection.onclose(async () => {
+        await start();
+    })
+
+    start();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     function refreshGroupList() {
 
         $("#groupList").empty();
@@ -118,22 +158,7 @@
 
 
 
-    function start() {
-        connection.start().then(() => {
-            console.log("Hub ile bağlantı kuruldu");
-            $("#connectionId").html(`Connection Id : ${connection.connectionId}`);
-        });
-           
-        
-    }
-
-    try {
-        start();
-    }
-    catch
-    {
-        setTimeout(() => start(), 5000)
-    }
+  
 
 
 

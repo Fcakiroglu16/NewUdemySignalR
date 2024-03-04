@@ -33,6 +33,52 @@ namespace UdemySignalR.Web.Hubs
             await Clients.Client(connectionId).ReceiveMessageForIndividualClient(message);
         }
 
+        public async Task BroadcastStreamDataToAllClient(IAsyncEnumerable<string> nameAsChunks)
+        {
+
+
+            await foreach (var name in nameAsChunks)
+            {
+
+                await Task.Delay(1000);
+                await Clients.All.ReceiveMessageAsStreamForAllClient(name);
+            }
+          
+        }
+
+        public async Task BroadcastStreamProductToAllClient(IAsyncEnumerable<Product> productAsChunks)
+        {
+
+
+            await foreach (var product in productAsChunks)
+            {
+
+                await Task.Delay(1000);
+                await Clients.All.ReceiveProductAsStreamForAllClient(product);
+            }
+
+        }
+
+        public async IAsyncEnumerable<string>   BroadCastFromHubToClient(int count)
+        {
+
+            foreach (var item in Enumerable.Range(1, count).ToList())
+            {
+                await Task.Delay(1000);
+                yield return $"{item}. data";
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+
 
         public async Task BroadcastMessageToGroupClients(string groupName, string message)
         {
@@ -78,5 +124,9 @@ namespace UdemySignalR.Web.Hubs
             await Clients.All.ReceiveConnectedClientCountAllClient(ConnectedClientCount);
             await base.OnDisconnectedAsync(exception);
         }
+
+       
+
+
     }
 }
